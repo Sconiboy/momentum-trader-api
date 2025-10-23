@@ -1,0 +1,59 @@
+Custom Finviz Scanner: "s: up 20%" Results
+Date: 2025-07-07
+URL: https://finviz.com/screener.ashx?v=111&s=ta_topgainers&f=ah_change_u,sh_price_u30,ta_change_u20,ta_perf2_dup&ft=3&o=-change&ar=10
+
+Scanner Criteria:
+- Top Gainers signal
+- Price under $30
+- Change up 20%+
+- Performance filters applied
+
+Results (Top candidates):
+1. GITS - Global Interactive Technologies Inc
+   - Sector: Communication Services
+   - Industry: Internet Content & Information
+   - Country: South Korea
+   - Market Cap: 11.29M
+   - Price: $3.84
+   - Change: +135.58%
+   - Volume: 46,204,158
+
+2. RGC - Regencell Bioscience Holdings Ltd
+   - Sector: Healthcare
+   - Industry: Drug Manufacturers - Specialty & Generic
+   - Country: Hong Kong
+   - Market Cap: 11.6M
+   - Price: $1.06
+   - Change: +18.73%
+   - Volume: [visible in scanner]
+
+3. LTRX - Lantheus Holdings Corp
+   - Sector: Healthcare
+   - Industry: Medical Devices
+   - Country: USA
+   - Market Cap: 8.7M
+   - Price: [visible in scanner]
+
+4. ENIC - Enel Chile SA
+   - Sector: Utilities
+   - Industry: Utilities - Regulated Electric
+   - Country: Chile
+
+5. WLFC - Willis Lease Finance Corp
+   - Sector: Industrials
+   - Industry: Rental & Leasing Services
+   - Country: USA
+
+This scanner provides excellent Ross Cameron candidates with:
+- Strong price momentum (20%+ gains)
+- Reasonable price range (under $30)
+- High volume activity
+- News catalyst potential (evidenced by large moves)
+
+Integration Notes:
+- This scanner URL can be programmatically accessed
+- Results should be cross-referenced with our Ross Cameron criteria
+- Float data needs to be obtained separately for each symbol
+- Volume and relative volume analysis should be performed
+- News catalyst detection should be applied
+
