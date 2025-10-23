@@ -10,6 +10,7 @@ from typing import List, Dict, Optional
 import yfinance as yf
 from datetime import datetime
 import uvicorn
+import os
 
 app = FastAPI(title="Momentum Trader Pro API", version="1.0.0")
 
@@ -261,16 +262,17 @@ async def get_stock(symbol: str):
     return analysis
 
 if __name__ == "__main__":
+    port = int(os.getenv("PORT", 8000))
     print("🚀 Starting Momentum Trader Pro API Server...")
     print("📊 Live Ross Cameron Stock Analysis")
-    print("🔗 API will be available at: http://localhost:8000")
-    print("📖 API docs at: http://localhost:8000/docs")
+    print(f"🔗 API will be available at: http://0.0.0.0:{port}")
+    print(f"📖 API docs at: http://0.0.0.0:{port}/docs")
     print("")
     
     uvicorn.run(
         app,
         host="0.0.0.0",
-        port=8000,
+        port=port,
         log_level="info"
     )
 
