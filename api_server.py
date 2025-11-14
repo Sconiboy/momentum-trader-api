@@ -35,6 +35,7 @@ class StockAnalysis(BaseModel):
     grade: str
     recommendation: str
     pillars: Dict[str, int]
+    hasOptions: bool
 
 def analyze_stock_live(symbol: str) -> Optional[StockAnalysis]:
     """Analyze a stock using Ross Cameron methodology with live data"""
@@ -45,6 +46,13 @@ def analyze_stock_live(symbol: str) -> Optional[StockAnalysis]:
         
         if len(hist) < 2:
             return None
+        
+        # Check if stock has options
+        try:
+            options_dates = ticker.options
+            has_options = len(options_dates) > 0
+        except:
+            has_options = False
         
         # Get current data
         current_price = hist['Close'].iloc[-1]
@@ -195,7 +203,8 @@ def analyze_stock_live(symbol: str) -> Optional[StockAnalysis]:
             rossScore=ross_score,
             grade=grade,
             recommendation=recommendation,
-            pillars=pillars
+            pillars=pillars,
+            hasOptions=has_options
         )
         
     except Exception as e:
